@@ -645,7 +645,7 @@ tr:nth-child(even) {
 	}
 
 	.img-slider .navigation {
-		bottom: 15px;
+		bottom: 5px;
 	}
 
 	.img-slider .navigation .btn {
