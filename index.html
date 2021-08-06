@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="assets/css/all.css" />
+		<link rel="stylesheet" href="assets/css/reset.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+
+		<script src="assets/js/navbar.js" defer></script>
+		<script src="assets/js/slider.js" defer></script>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"
+			defer
+		></script>
+		<script src="assets/js/tableAPI.js" defer></script>
+		<script src="assets/js/newsAPI.js" defer></script>
+	</head>
+
+	<body>
+		<header>
+			<div id="navbar">
+				<a href="#home">Home</a>
+				<a href="#LastNews">LastNews</a>
+				<a href="#Info">Info</a>
+				<a href="#footer">Contact</a>
+			</div>
+		</header>
+
+		<div class="banner">
+			<a class="banner-btn" href="#news-slider" id="home"
+				><span class="banner-btn-text">Click here</span>
+				<img
+					class="banner-click"
+					src="assets/images/icons8-below-96.png"
+					alt="Not Found!"
+				/>
+			</a>
+			<h1 class="banner-text">
+				<span class="banner-text-shadow">CORONAVIRUS DISEASE UPDATE</span>
+			</h1>
+		</div>
+
+		<div class="show-slider">
+			<p id="news-slider">here</p>
+		</div>
+
+		<section class="main-slider">
+			<div class="img-slider">
+				<div class="slide active sliderOne">
+					<img
+						id="slideOne"
+						class="responsiveIMG-slider"
+						src="assets/images/slider1.jpg"
+						alt="Not Found"
+					/>
+				</div>
+				<div class="slide sliderTwo">
+					<img
+						id="slideTwo"
+						class="responsiveIMG-slider"
+						src="assets/images/slider2.jpg"
+						alt="Not Found"
+					/>
+				</div>
+				<div class="slide sliderThree">
+					<img
+						id="slideThree"
+						class="responsiveIMG-slider"
+						src="assets/images/slider3.jpg"
+						alt="Not Found"
+					/>
+				</div>
+				<div class="navigation">
+					<div class="btn active" onclick="currentSlide(0)"></div>
+					<div class="btn" onclick="currentSlide(1)"></div>
+					<div class="btn" onclick="currentSlide(2)"></div>
+				</div>
+			</div>
+		</section>
+
+		<div class="show-table">
+			<p id="LastNews">here</p>
+			<p class="title-table">Last News</p>
+		</div>
+
+		<section id="lastINFO" class="news-table">
+			<div class="selector-country">
+				<label class="selector-label" for="countries">Choose a country:</label>
+				<select class="selector-button" id="country" name="country">
+					<option id="countryNames" value="All">All</option>
+				</select>
+			</div>
+			<table id="cases">
+				<tr>
+					<th>Location</th>
+					<th>Cases</th>
+					<th>Recovered</th>
+					<th>Deaths</th>
+				</tr>
+			</table>
+		</section>
+
+		<section id="loaderForShow" class="positionLoader">
+			<div class="positionLoader">
+				<div class="loader"></div>
+			</div>
+		</section>
+
+		<section id="diagramForShow" class="diagram">
+			<div class="positionChart">
+				<canvas class="chart" id="myChart"></canvas>
+			</div>
+		</section>
+
+		<div class="show-cards">
+			<p id="Info">here</p>
+			<p class="title-cards">Informations</p>
+		</div>
+
+		<section class="cards" id="news">
+			<article class="card">
+				<img
+					class="responsive-img default-img-cards"
+					src="assets/images/stay-home(1).png"
+					alt="Not Found"
+				/>
+				<div class="card-content">
+					<h5>Why does staying at home help?</h5>
+					<p>
+						Governments around the world are encouraging people to stay at home
+						to protect health services and save lives...
+					</p>
+					<a
+						href="https://www.nytimes.com/live/2021/05/20/world/covid-vaccine-coronavirus-mask"
+						target="_blank"
+						class="btnhhh btn-primary"
+						>Read More</a
+					>
+				</div>
+			</article>
+			<article class="card">
+				<img
+					class="responsive-img default-img-cards"
+					src="assets/images/new-normality.png"
+					alt="Not Found"
+				/>
+				<div class="card-content">
+					<h2>Reported Cases and Deaths by Country</h2>
+					<p>
+						The coronavirus COVID-19 is affecting 220 countries and territories.
+						The day is reset after midnight GMT+0 and we can say...
+					</p>
+					<a
+						href="https://www.nytimes.com/live/2021/05/20/world/covid-vaccine-coronavirus-mask"
+						target="_blank"
+						class="btnhhh btn-primary"
+						>Read More</a
+					>
+				</div>
+			</article>
+
+			<article class="card">
+				<img
+					class="responsive-img default-img-cards"
+					src="assets/images/covid-19.png"
+					alt="Not Found"
+				/>
+				<div class="card-content">
+					<h2>Progression of corona and important things</h2>
+					<p>
+						23 million children missed out on basic vaccines through routine
+						immunization services in 2020 – 3.7 million more than...
+					</p>
+					<a
+						href="https://www.nytimes.com/live/2021/05/20/world/covid-vaccine-coronavirus-mask"
+						target="_blank"
+						class="btnhhh btn-primary"
+						>Read More</a
+					>
+				</div>
+			</article>
+		</section>
+
+		<div class="show-footer">
+			<p id="footer">here</p>
+		</div>
+
+		<footer class="footer">
+			<div class="footer-text">
+				<p>
+					Contact Us <br />
+					<a href="mailto:ghazaleh.mng1@gmail.com">ghazaleh.mng1@gmail.com</a>
+				</p>
+			</div>
+			<div class="footer-text">
+				<h3>Write for us:</h3>
+				<textarea
+					class="footer-textarea"
+					name="message"
+					cols="30"
+					rows="6"
+				></textarea
+				><br />
+				<input class="footer-input" type="submit" value="send" />
+			</div>
+			<div class="footer-text">
+				<img
+					class="icon-footer"
+					src="assets/images/noun_pandemic_3653177.png"
+				/>
+			</div>
+		</footer>
+	</body>
+</html>
